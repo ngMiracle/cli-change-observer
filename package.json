@@ -1,0 +1,13 @@
+{
+  "name": "cli-change-observer",
+  "version": "1.0.0",
+  "description": "Automation tool for checking changes of Angular CLI generated project in different versions",
+  "main": "index.js",
+  "repository": "https://github.com/trotyl/cli-change-observer.git",
+  "author": "Trotyl <trotyl@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "shelljs": "^0.7.8"
+  }
+}
