@@ -1,0 +1,42 @@
+diff --git a/README.md b/README.md
+index 28fab9b..970b4e2 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+ 
+ ## Development server
+ 
+diff --git a/e2e/app.e2e-spec.ts b/e2e/app.e2e-spec.ts
+index ea65ea7..1fb86c1 100644
+--- a/e2e/app.e2e-spec.ts
++++ b/e2e/app.e2e-spec.ts
+@@ -7,10 +7,8 @@ describe('project-name App', () => {
+     page = new ProjectNamePage();
+   });
+ 
+-  it('should display welcome message', done => {
++  it('should display welcome message', () => {
+     page.navigateTo();
+-    page.getParagraphText()
+-      .then(msg => expect(msg).toEqual('Welcome to app!!'))
+-      .then(done, done.fail);
++    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+   });
+ });
+diff --git a/package.json b/package.json
+index ca2a93f..64f51ca 100644
+--- a/package.json
++++ b/package.json
+@@ -26,7 +26,7 @@
+     "zone.js": "^0.8.4"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.1.0",
++    "@angular/cli": "1.1.1",
+     "@angular/compiler-cli": "^4.0.0",
+     "@angular/language-service": "^4.0.0",
+     "@types/jasmine": "2.5.45",

@@ -1,0 +1,54 @@
+diff --git a/README.md b/README.md
+index d0ab663..d094a15 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
+ 
+ ## Development server
+ 
+diff --git a/package.json b/package.json
+index 0225dbb..7e1509f 100644
+--- a/package.json
++++ b/package.json
+@@ -25,7 +25,7 @@
+     "zone.js": "^0.8.4"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.0.3",
++    "@angular/cli": "1.0.4",
+     "@angular/compiler-cli": "^4.0.0",
+     "@types/jasmine": "2.5.38",
+     "@types/node": "~6.0.60",
+diff --git a/protractor.conf.js b/protractor.conf.js
+index 1c5e1e5..7ee3b5e 100644
+--- a/protractor.conf.js
++++ b/protractor.conf.js
+@@ -19,12 +19,10 @@ exports.config = {
+     defaultTimeoutInterval: 30000,
+     print: function() {}
+   },
+-  beforeLaunch: function() {
++  onPrepare() {
+     require('ts-node').register({
+       project: 'e2e/tsconfig.e2e.json'
+     });
+-  },
+-  onPrepare() {
+     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+   }
+ };
+diff --git a/src/index.html b/src/index.html
+index 52caa4b..9768800 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -1,5 +1,5 @@
+ <!doctype html>
+-<html>
++<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <title>ProjectName</title>

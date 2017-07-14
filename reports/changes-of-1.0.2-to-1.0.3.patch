@@ -1,0 +1,123 @@
+diff --git a/README.md b/README.md
+index e0520f2..d0ab663 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+ 
+ ## Development server
+ 
+diff --git a/e2e/app.po.ts b/e2e/app.po.ts
+index 1e8e70f..f363f76 100644
+--- a/e2e/app.po.ts
++++ b/e2e/app.po.ts
+@@ -1,4 +1,4 @@
+-import { browser, element, by } from 'protractor';
++import { browser, by, element } from 'protractor';
+ 
+ export class ProjectNamePage {
+   navigateTo() {
+diff --git a/e2e/tsconfig.e2e.json b/e2e/tsconfig.e2e.json
+index ac7a373..e2a9a2f 100644
+--- a/e2e/tsconfig.e2e.json
++++ b/e2e/tsconfig.e2e.json
+@@ -4,7 +4,7 @@
+     "outDir": "../out-tsc/e2e",
+     "module": "commonjs",
+     "target": "es5",
+-    "types":[
++    "types": [
+       "jasmine",
+       "node"
+     ]
+diff --git a/package.json b/package.json
+index ee503cd..0225dbb 100644
+--- a/package.json
++++ b/package.json
+@@ -25,7 +25,7 @@
+     "zone.js": "^0.8.4"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.0.2",
++    "@angular/cli": "1.0.3",
+     "@angular/compiler-cli": "^4.0.0",
+     "@types/jasmine": "2.5.38",
+     "@types/node": "~6.0.60",
+@@ -33,7 +33,7 @@
+     "jasmine-core": "~2.5.2",
+     "jasmine-spec-reporter": "~3.2.0",
+     "karma": "~1.4.1",
+-    "karma-chrome-launcher": "~2.0.0",
++    "karma-chrome-launcher": "~2.1.1",
+     "karma-cli": "~1.0.1",
+     "karma-jasmine": "~1.1.0",
+     "karma-jasmine-html-reporter": "^0.2.2",
+diff --git a/src/polyfills.ts b/src/polyfills.ts
+index 53bdaf1..bc94e7a 100644
+--- a/src/polyfills.ts
++++ b/src/polyfills.ts
+@@ -66,3 +66,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
+  * Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10
+  */
+ // import 'intl';  // Run `npm install --save intl`.
++/**
++ * Need to import at least one locale-data with intl.
++ */
++// import 'intl/locale-data/jsonp/en';
+diff --git a/tslint.json b/tslint.json
+index 9113f13..97adaa5 100644
+--- a/tslint.json
++++ b/tslint.json
+@@ -12,7 +12,10 @@
+     "curly": true,
+     "eofline": true,
+     "forin": true,
+-    "import-blacklist": [true, "rxjs"],
++    "import-blacklist": [
++      true,
++      "rxjs"
++    ],
+     "import-spacing": true,
+     "indent": [
+       true,
+@@ -42,11 +45,13 @@
+     ],
+     "no-construct": true,
+     "no-debugger": true,
+-    "no-duplicate-variable": true,
+     "no-empty": false,
+     "no-empty-interface": true,
+     "no-eval": true,
+-    "no-inferrable-types": [true, "ignore-params"],
++    "no-inferrable-types": [
++      true,
++      "ignore-params"
++    ],
+     "no-shadowed-variable": true,
+     "no-string-literal": false,
+     "no-string-throw": true,
+@@ -97,9 +102,18 @@
+       "check-separator",
+       "check-type"
+     ],
+-
+-    "directive-selector": [true, "attribute", "app", "camelCase"],
+-    "component-selector": [true, "element", "app", "kebab-case"],
++    "directive-selector": [
++      true,
++      "attribute",
++      "app",
++      "camelCase"
++    ],
++    "component-selector": [
++      true,
++      "element",
++      "app",
++      "kebab-case"
++    ],
+     "use-input-property-decorator": true,
+     "use-output-property-decorator": true,
+     "use-host-property-decorator": true,

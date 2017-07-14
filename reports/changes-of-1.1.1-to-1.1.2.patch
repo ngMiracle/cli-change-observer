@@ -1,0 +1,38 @@
+diff --git a/README.md b/README.md
+index 970b4e2..4c20c09 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+ 
+ ## Development server
+ 
+diff --git a/package.json b/package.json
+index 64f51ca..8214953 100644
+--- a/package.json
++++ b/package.json
+@@ -26,7 +26,7 @@
+     "zone.js": "^0.8.4"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.1.1",
++    "@angular/cli": "1.1.2",
+     "@angular/compiler-cli": "^4.0.0",
+     "@angular/language-service": "^4.0.0",
+     "@types/jasmine": "2.5.45",
+diff --git a/src/app/app.component.html b/src/app/app.component.html
+index d0322ef..b41bbe4 100644
+--- a/src/app/app.component.html
++++ b/src/app/app.component.html
+@@ -8,7 +8,7 @@
+ <h2>Here are some links to help you start: </h2>
+ <ul>
+   <li>
+-    <h2><a target="_blank" href="https://angular.io/docs/ts/latest/tutorial/">Tour of Heroes</a></h2>
++    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+   </li>
+   <li>
+     <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>

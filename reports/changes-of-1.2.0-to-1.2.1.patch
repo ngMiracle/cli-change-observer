@@ -1,0 +1,144 @@
+diff --git a/README.md b/README.md
+index 87534af..24b3f04 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+ 
+ ## Development server
+ 
+diff --git a/e2e/app.e2e-spec.ts b/e2e/app.e2e-spec.ts
+index 1fb86c1..7108f4b 100644
+--- a/e2e/app.e2e-spec.ts
++++ b/e2e/app.e2e-spec.ts
+@@ -9,6 +9,6 @@ describe('project-name App', () => {
+ 
+   it('should display welcome message', () => {
+     page.navigateTo();
+-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
++    expect(page.getParagraphText()).toEqual('Welcome to app!');
+   });
+ });
+diff --git a/e2e/tsconfig.e2e.json b/e2e/tsconfig.e2e.json
+index 39b800f..1d9e5ed 100644
+--- a/e2e/tsconfig.e2e.json
++++ b/e2e/tsconfig.e2e.json
+@@ -2,6 +2,7 @@
+   "extends": "../tsconfig.json",
+   "compilerOptions": {
+     "outDir": "../out-tsc/e2e",
++    "baseUrl": "./",
+     "module": "commonjs",
+     "target": "es5",
+     "types": [
+diff --git a/package.json b/package.json
+index b46cb30..fbd74e3 100644
+--- a/package.json
++++ b/package.json
+@@ -26,7 +26,7 @@
+     "zone.js": "^0.8.4"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.2.0",
++    "@angular/cli": "1.2.1",
+     "@angular/compiler-cli": "^4.0.0",
+     "@angular/language-service": "^4.0.0",
+     "@types/jasmine": "~2.5.53",
+diff --git a/src/app/app.component.html b/src/app/app.component.html
+index 1a00adb..e270762 100644
+--- a/src/app/app.component.html
++++ b/src/app/app.component.html
+@@ -1,7 +1,7 @@
+ <!--The content below is only a placeholder and can be replaced.-->
+ <div style="text-align:center">
+   <h1>
+-    Welcome to {{title}}!!
++    Welcome to {{title}}!
+   </h1>
+   <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+ </div>
+diff --git a/src/app/app.component.spec.ts b/src/app/app.component.spec.ts
+index 7d2799c..9510495 100644
+--- a/src/app/app.component.spec.ts
++++ b/src/app/app.component.spec.ts
+@@ -27,6 +27,6 @@ describe('AppComponent', () => {
+     const fixture = TestBed.createComponent(AppComponent);
+     fixture.detectChanges();
+     const compiled = fixture.debugElement.nativeElement;
+-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!!');
++    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+   }));
+ });
+diff --git a/src/tsconfig.app.json b/src/tsconfig.app.json
+index 5e2507d..39ba8db 100644
+--- a/src/tsconfig.app.json
++++ b/src/tsconfig.app.json
+@@ -2,8 +2,8 @@
+   "extends": "../tsconfig.json",
+   "compilerOptions": {
+     "outDir": "../out-tsc/app",
++    "baseUrl": "./",
+     "module": "es2015",
+-    "baseUrl": "",
+     "types": []
+   },
+   "exclude": [
+diff --git a/src/tsconfig.spec.json b/src/tsconfig.spec.json
+index 510e3f1..63d89ff 100644
+--- a/src/tsconfig.spec.json
++++ b/src/tsconfig.spec.json
+@@ -2,9 +2,9 @@
+   "extends": "../tsconfig.json",
+   "compilerOptions": {
+     "outDir": "../out-tsc/spec",
++    "baseUrl": "./",
+     "module": "commonjs",
+     "target": "es5",
+-    "baseUrl": "",
+     "types": [
+       "jasmine",
+       "node"
+diff --git a/tsconfig.json b/tsconfig.json
+index a35a8ee..1f9b558 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -2,7 +2,6 @@
+   "compileOnSave": false,
+   "compilerOptions": {
+     "outDir": "./dist/out-tsc",
+-    "baseUrl": "src",
+     "sourceMap": true,
+     "declaration": false,
+     "moduleResolution": "node",
+diff --git a/tslint.json b/tslint.json
+index dd117b3..0db5751 100644
+--- a/tslint.json
++++ b/tslint.json
+@@ -31,8 +31,14 @@
+     "member-access": false,
+     "member-ordering": [
+       true,
+-      "static-before-instance",
+-      "variables-before-functions"
++      {
++        "order": [
++          "static-field",
++          "instance-field",
++          "static-method",
++          "instance-method"
++        ]
++      }
+     ],
+     "no-arg": true,
+     "no-bitwise": true,
+@@ -80,6 +86,7 @@
+     ],
+     "radix": true,
+     "semicolon": [
++      true,
+       "always"
+     ],
+     "triple-equals": [
