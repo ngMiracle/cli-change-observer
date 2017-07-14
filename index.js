@@ -13,8 +13,6 @@ const argv = minimist(process.argv.slice(2), {
   '--': true,
 })
 
-console.log(JSON.stringify(argv))
-
 const [oldVersion, newVersion] = argv._
 const cliArgs = argv['--']
 const { 
