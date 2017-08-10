@@ -1,0 +1,121 @@
+diff --git a/README.md b/README.md
+index 3f7cbfc..6f4e5e0 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+ 
+ ## Development server
+ 
+diff --git a/e2e/app.e2e-spec.ts b/e2e/app.e2e-spec.ts
+index 7108f4b..0a16800 100644
+--- a/e2e/app.e2e-spec.ts
++++ b/e2e/app.e2e-spec.ts
+@@ -1,10 +1,10 @@
+-import { ProjectNamePage } from './app.po';
++import { AppPage } from './app.po';
+ 
+ describe('project-name App', () => {
+-  let page: ProjectNamePage;
++  let page: AppPage;
+ 
+   beforeEach(() => {
+-    page = new ProjectNamePage();
++    page = new AppPage();
+   });
+ 
+   it('should display welcome message', () => {
+diff --git a/e2e/app.po.ts b/e2e/app.po.ts
+index f363f76..82ea75b 100644
+--- a/e2e/app.po.ts
++++ b/e2e/app.po.ts
+@@ -1,6 +1,6 @@
+ import { browser, by, element } from 'protractor';
+ 
+-export class ProjectNamePage {
++export class AppPage {
+   navigateTo() {
+     return browser.get('/');
+   }
+diff --git a/karma.conf.js b/karma.conf.js
+index 4d9ab9d..af139fa 100644
+--- a/karma.conf.js
++++ b/karma.conf.js
+@@ -1,5 +1,5 @@
+ // Karma configuration file, see link for more information
+-// https://karma-runner.github.io/0.13/config/configuration-file.html
++// https://karma-runner.github.io/1.0/config/configuration-file.html
+ 
+ module.exports = function (config) {
+   config.set({
+diff --git a/package.json b/package.json
+index e1fcd4b..ca8c024 100644
+--- a/package.json
++++ b/package.json
+@@ -12,27 +12,27 @@
+   },
+   "private": true,
+   "dependencies": {
+-    "@angular/animations": "^4.0.0",
+-    "@angular/common": "^4.0.0",
+-    "@angular/compiler": "^4.0.0",
+-    "@angular/core": "^4.0.0",
+-    "@angular/forms": "^4.0.0",
+-    "@angular/http": "^4.0.0",
+-    "@angular/platform-browser": "^4.0.0",
+-    "@angular/platform-browser-dynamic": "^4.0.0",
+-    "@angular/router": "^4.0.0",
++    "@angular/animations": "^4.2.4",
++    "@angular/common": "^4.2.4",
++    "@angular/compiler": "^4.2.4",
++    "@angular/core": "^4.2.4",
++    "@angular/forms": "^4.2.4",
++    "@angular/http": "^4.2.4",
++    "@angular/platform-browser": "^4.2.4",
++    "@angular/platform-browser-dynamic": "^4.2.4",
++    "@angular/router": "^4.2.4",
+     "core-js": "^2.4.1",
+-    "rxjs": "^5.4.1",
++    "rxjs": "^5.4.2",
+     "zone.js": "^0.8.14"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.2.7",
+-    "@angular/compiler-cli": "^4.0.0",
+-    "@angular/language-service": "^4.0.0",
++    "@angular/cli": "1.3.0",
++    "@angular/compiler-cli": "^4.2.4",
++    "@angular/language-service": "^4.2.4",
+     "@types/jasmine": "~2.5.53",
+     "@types/jasminewd2": "~2.0.2",
+     "@types/node": "~6.0.60",
+-    "codelyzer": "~3.0.1",
++    "codelyzer": "~3.1.1",
+     "jasmine-core": "~2.6.2",
+     "jasmine-spec-reporter": "~4.1.0",
+     "karma": "~1.7.0",
+@@ -42,7 +42,7 @@
+     "karma-jasmine": "~1.1.0",
+     "karma-jasmine-html-reporter": "^0.2.2",
+     "protractor": "~5.1.2",
+-    "ts-node": "~3.0.4",
++    "ts-node": "~3.2.0",
+     "tslint": "~5.3.2",
+     "typescript": "~2.3.3"
+   }
+diff --git a/tsconfig.json b/tsconfig.json
+index 1f9b558..a6c016b 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -12,7 +12,7 @@
+       "node_modules/@types"
+     ],
+     "lib": [
+-      "es2016",
++      "es2017",
+       "dom"
+     ]
+   }
