@@ -1,0 +1,25 @@
+diff --git a/README.md b/README.md
+index b5119ed..a409c8c 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+ 
+ ## Development server
+ 
+diff --git a/package.json b/package.json
+index 7897cbe..2848564 100644
+--- a/package.json
++++ b/package.json
+@@ -26,7 +26,7 @@
+     "zone.js": "^0.8.14"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.4.1",
++    "@angular/cli": "1.4.2",
+     "@angular/compiler-cli": "^4.2.4",
+     "@angular/language-service": "^4.2.4",
+     "@types/jasmine": "~2.5.53",

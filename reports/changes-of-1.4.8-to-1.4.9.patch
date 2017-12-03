@@ -1,0 +1,25 @@
+diff --git a/tmp/workspaces/project-name-old/README.md b/tmp/workspaces/project-name/README.md
+index 7e2977d..3fca289 100644
+--- a/tmp/workspaces/project-name-old/README.md
++++ b/tmp/workspaces/project-name/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.8.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
+ 
+ ## Development server
+ 
+diff --git a/tmp/workspaces/project-name-old/package.json b/tmp/workspaces/project-name/package.json
+index e840dce..b3b057b 100644
+--- a/tmp/workspaces/project-name-old/package.json
++++ b/tmp/workspaces/project-name/package.json
+@@ -26,7 +26,7 @@
+     "zone.js": "^0.8.14"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.4.8",
++    "@angular/cli": "1.4.9",
+     "@angular/compiler-cli": "^4.2.4",
+     "@angular/language-service": "^4.2.4",
+     "@types/jasmine": "~2.5.53",

@@ -1,0 +1,156 @@
+diff --git a/tmp/workspaces/project-name-old/README.md b/tmp/workspaces/project-name/README.md
+index 3fca289..7490a94 100644
+--- a/tmp/workspaces/project-name-old/README.md
++++ b/tmp/workspaces/project-name/README.md
+@@ -1,6 +1,6 @@
+ # ProjectName
+ 
+-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
++This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+ 
+ ## Development server
+ 
+diff --git a/tmp/workspaces/project-name-old/package.json b/tmp/workspaces/project-name/package.json
+index b3b057b..0344985 100644
+--- a/tmp/workspaces/project-name-old/package.json
++++ b/tmp/workspaces/project-name/package.json
+@@ -12,27 +12,27 @@
+   },
+   "private": true,
+   "dependencies": {
+-    "@angular/animations": "^4.2.4",
+-    "@angular/common": "^4.2.4",
+-    "@angular/compiler": "^4.2.4",
+-    "@angular/core": "^4.2.4",
+-    "@angular/forms": "^4.2.4",
+-    "@angular/http": "^4.2.4",
+-    "@angular/platform-browser": "^4.2.4",
+-    "@angular/platform-browser-dynamic": "^4.2.4",
+-    "@angular/router": "^4.2.4",
++    "@angular/animations": "^5.0.0",
++    "@angular/common": "^5.0.0",
++    "@angular/compiler": "^5.0.0",
++    "@angular/core": "^5.0.0",
++    "@angular/forms": "^5.0.0",
++    "@angular/http": "^5.0.0",
++    "@angular/platform-browser": "^5.0.0",
++    "@angular/platform-browser-dynamic": "^5.0.0",
++    "@angular/router": "^5.0.0",
+     "core-js": "^2.4.1",
+-    "rxjs": "^5.4.2",
++    "rxjs": "^5.5.2",
+     "zone.js": "^0.8.14"
+   },
+   "devDependencies": {
+-    "@angular/cli": "1.4.9",
+-    "@angular/compiler-cli": "^4.2.4",
+-    "@angular/language-service": "^4.2.4",
++    "@angular/cli": "1.5.0",
++    "@angular/compiler-cli": "^5.0.0",
++    "@angular/language-service": "^5.0.0",
+     "@types/jasmine": "~2.5.53",
+     "@types/jasminewd2": "~2.0.2",
+     "@types/node": "~6.0.60",
+-    "codelyzer": "~3.2.0",
++    "codelyzer": "^4.0.1",
+     "jasmine-core": "~2.6.2",
+     "jasmine-spec-reporter": "~4.1.0",
+     "karma": "~1.7.0",
+@@ -44,6 +44,6 @@
+     "protractor": "~5.1.2",
+     "ts-node": "~3.2.0",
+     "tslint": "~5.7.0",
+-    "typescript": "~2.3.3"
++    "typescript": "~2.4.2"
+   }
+ }
+diff --git a/tmp/workspaces/project-name-old/src/app/app.component.html b/tmp/workspaces/project-name/src/app/app.component.html
+index 46d517b..fa2706a 100644
+--- a/tmp/workspaces/project-name-old/src/app/app.component.html
++++ b/tmp/workspaces/project-name/src/app/app.component.html
+@@ -1,9 +1,9 @@
+ <!--The content below is only a placeholder and can be replaced.-->
+ <div style="text-align:center">
+   <h1>
+-    Welcome to {{title}}!
++    Welcome to {{ title }}!
+   </h1>
+-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
++  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+ </div>
+ <h2>Here are some links to help you start: </h2>
+ <ul>
+diff --git a/tmp/workspaces/project-name-old/src/app/app.module.ts b/tmp/workspaces/project-name/src/app/app.module.ts
+index f657163..926975a 100644
+--- a/tmp/workspaces/project-name-old/src/app/app.module.ts
++++ b/tmp/workspaces/project-name/src/app/app.module.ts
+@@ -1,8 +1,10 @@
+ import { BrowserModule } from '@angular/platform-browser';
+ import { NgModule } from '@angular/core';
+ 
++
+ import { AppComponent } from './app.component';
+ 
++
+ @NgModule({
+   declarations: [
+     AppComponent
+diff --git a/tmp/workspaces/project-name-old/src/polyfills.ts b/tmp/workspaces/project-name/src/polyfills.ts
+index 20d4075..d68672f 100644
+--- a/tmp/workspaces/project-name-old/src/polyfills.ts
++++ b/tmp/workspaces/project-name/src/polyfills.ts
+@@ -55,7 +55,7 @@ import 'core-js/es7/reflect';
+ 
+ 
+ /***************************************************************************************************
+- * Zone JS is required by Angular itself.
++ * Zone JS is required by default for Angular itself.
+  */
+ import 'zone.js/dist/zone';  // Included with Angular CLI.
+ 
+@@ -64,13 +64,3 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
+ /***************************************************************************************************
+  * APPLICATION IMPORTS
+  */
+-
+-/**
+- * Date, currency, decimal and percent pipes.
+- * Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10
+- */
+-// import 'intl';  // Run `npm install --save intl`.
+-/**
+- * Need to import at least one locale-data with intl.
+- */
+-// import 'intl/locale-data/jsonp/en';
+diff --git a/tmp/workspaces/project-name-old/tslint.json b/tmp/workspaces/project-name/tslint.json
+index c24dc29..20ad878 100644
+--- a/tmp/workspaces/project-name-old/tslint.json
++++ b/tmp/workspaces/project-name/tslint.json
+@@ -11,6 +11,9 @@
+       "check-space"
+     ],
+     "curly": true,
++    "deprecation": {
++      "severity": "warn"
++    },
+     "eofline": true,
+     "forin": true,
+     "import-blacklist": [
+@@ -127,6 +130,8 @@
+       "app",
+       "kebab-case"
+     ],
++    "angular-whitespace": [true, "check-interpolation"],
++    "no-output-on-prefix": true,
+     "use-input-property-decorator": true,
+     "use-output-property-decorator": true,
+     "use-host-property-decorator": true,
+@@ -135,7 +140,6 @@
+     "use-life-cycle-interface": true,
+     "use-pipe-transform-interface": true,
+     "component-class-suffix": true,
+-    "directive-class-suffix": true,
+-    "invoke-injectable": true
++    "directive-class-suffix": true
+   }
+ }

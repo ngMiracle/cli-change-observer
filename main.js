@@ -24,47 +24,43 @@ const {
 
 const cliArgsStr = cliArgs.join(' ')
 const basePath = `/tmp/workspaces`
-const cliProjectPath = `${basePath}/cli-change-observer`
+const rootPath = `${basePath}/cli-change-observer`
 const projectPath = `${basePath}/${projectName}`
 const projectOldPath = `${basePath}/${projectName}-old`
-const binPath = `${cliProjectPath}/node_modules/.bin`
+const binPath = `${rootPath}/node_modules/.bin`
 
 const installCmd = yarn ? `yarn add` : `npm install`
 
 shell.echo(`Checking difference from ${oldVersion} to ${newVersion}`)
 shell.echo(`For command: ng new ${cliArgsStr} ${projectName}`)
 
-shell.rm('-rf', cliProjectPath)
+shell.rm('-rf', rootPath)
 shell.rm('-rf', projectPath)
 shell.rm('-rf', projectOldPath)
 
-shell.mkdir('-p', cliProjectPath)
+shell.mkdir('-p', rootPath)
 shell.mkdir('-p', projectPath)
 
-shell.cd(cliProjectPath)
+shell.cd(rootPath)
 shell.echo(`Installing Angular CLI version ${oldVersion}`)
 shell.exec(`${installCmd} @angular/cli@${oldVersion}`)
 
 shell.cd(basePath)
 shell.echo(`Creating project in version ${oldVersion}`)
-shell.exec(`${binPath}/ng new -si ${cliArgsStr} ${projectName}`)
+shell.exec(`${binPath}/ng new --si --sg ${cliArgsStr} ${projectName}`)
 
 shell.mv(projectPath, projectOldPath)
 
-shell.cd(cliProjectPath)
+shell.cd(rootPath)
 shell.echo(`Installing Angular CLI version ${newVersion}`)
 shell.exec(`${installCmd} @angular/cli@${newVersion}`)
 
 shell.cd(basePath)
 shell.echo(`Creating project in version ${newVersion}`)
-shell.exec(`${binPath}/ng new -si ${cliArgsStr} ${projectName}`)
+shell.exec(`${binPath}/ng new --si --sg ${cliArgsStr} ${projectName}`)
 
-shell.rm('-rf', `${projectPath}/.git`)
-shell.cp('-r', `${projectOldPath}/.git`, `${projectPath}/.git`)
-
-shell.cd(projectPath)
 if (interactive) {
-  shell.exec('git diff')
+  shell.exec(`git diff --no-index ${projectOldPath} ${projectPath}`)
 } else {
-  shell.exec(`git diff > ${outputPath}`)
+  shell.exec(`git diff --no-index ${projectOldPath} ${projectPath} > ${outputPath}`)
 }
